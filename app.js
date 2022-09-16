@@ -37,7 +37,7 @@ let products = [
         name: 'HUAWEI P30',
         price: '399.00',
         imgUrl: 'https://gsm-bg.eu/image/cache/catalog/huawei/huawei-p30-pro-amber-sunrise-osnowna-228x228.png'
-    },
+    }
 ]
 
 function deleteProduct(e) {
@@ -81,6 +81,7 @@ function renderProducts() {
         let productButtons = document.createElement('div');
         productButtons.className = 'productButtons';
         let deleteBtn = document.createElement('button');
+        deleteBtn.className = 'border';
         let deleteIcon = document.createElement('span');
         deleteIcon.className = 'material-icons';
         deleteIcon.innerHTML = 'delete';
@@ -89,6 +90,7 @@ function renderProducts() {
 
 
         let cartBtn = document.createElement('button');
+        cartBtn.className = 'border';
         let cartIcon = document.createElement('span');
         cartIcon.className = 'material-icons';
         cartIcon.innerHTML = 'shopping_cart';
@@ -104,3 +106,10 @@ function renderProducts() {
     });
 }
 
+
+// function paginate() {
+//     let paginationLimit = 8;
+//     let pageCount = Math.ceil(products.length / paginationLimit);
+//     let currentPage;
+
+// }
