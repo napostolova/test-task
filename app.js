@@ -42,8 +42,13 @@ let products = [
 
 function deleteProduct(e) {
     e.preventDefault();
-    console.log(e.target);
-
+    let target = e.target.parentNode.parentNode.parentNode;
+    if (target.className == 'col-3 border') {
+        target.style.display = 'none';
+    } else {
+        target = e.target.parentNode.parentNode.parentNode.parentNode;
+        target.style.display = 'none';
+    }
 }
 
 function renderProducts() {
